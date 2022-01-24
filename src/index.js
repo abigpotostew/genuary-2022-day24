@@ -89,7 +89,8 @@ const sketch = p5 => {
         // const ms = new Circle(p5, p5.createVector(p5.mouseX, p5.mouseY), p5.width *.04, p5.width *.04 *.1)
         // ms.draw(p5);
         p5.noiseDetail(1, 0.3);
-        let blues = [p5.color(20, 30, 100), p5.color(20, 30, 120), p5.color(20, 20, 100), p5.color(20, 35, 100), p5.color(35, 20, 110)]
+        let blues = [p5.color(20, 30, 100), p5.color(20, 30, 120), p5.color(20, 20, 100), p5.color(20, 35, 100), p5.color(35, 20, 110), p5.color(35, 20, 210)]
+        let green = p5.color(10, p5.random(60,100), 10);
         for (let shape of shapes) {
             const scalar = .01
             let n = p5.noise(shape.pos.x * scalar, shape.pos.y * scalar)
@@ -97,10 +98,10 @@ const sketch = p5 => {
             if (n > .5) {
                 //white ocean spray
                 color = p5.color(160, 160, 200)
-            } else if (n > .43) {
-                color = p5.color(21, 160, 10)
+
             } else if (n > .35) {
-                color = p5.color(21, 160, 10)
+                // color = p5.color(10, 70, 10)
+                color=p5.color(10, p5.random(60,100), 10);
             } else if (n > .32) {
                 color = p5.color(190, 160, 160)
             } else {

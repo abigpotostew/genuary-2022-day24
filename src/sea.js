@@ -95,9 +95,9 @@ export const seaGen = (p5, num) => {
                 singleCollisionShape = true
                 r = p5.sb.random(p5.width * .005, p5.width * .015);
             } else if (r < .75) {
-                r = p5.sb.random(p5.width * .02, p5.width * .04);
+                r = p5.sb.random(p5.width * .03, p5.width * .05);
             } else if (r < .99) {
-                r = p5.sb.random(p5.width * .05, p5.width * .07);
+                r = p5.sb.random(p5.width * .06, p5.width * .09);
             } else {
                 r = p5.sb.random(p5.width * .5, p5.width * .7);
             }
